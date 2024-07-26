@@ -1,0 +1,15 @@
+echo "cpp-examples" ;
+
+project
+	:
+		default-build
+			<cxxstd>23
+;
+
+rule cleanall ( )
+{
+	echo "rm -rf `find . -name bin`" ;
+	SHELL "rm -rf `find . -name bin`" ;
+	exit ;
+}
+

@@ -1,0 +1,16 @@
+echo "Build boost-odeint" ;
+
+alias boost-odeint ;
+
+progs =
+	lorentz
+;
+
+for prog in $(progs)
+{
+	exe $(prog) : $(prog).cpp
+		:
+			<library>boost-odeint
+	;
+}
+

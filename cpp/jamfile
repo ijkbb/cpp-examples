@@ -1,0 +1,13 @@
+echo "Build cpp ..." ;
+
+progs =
+	class-inheritance
+	virtual
+	template-deducing-guide
+;
+
+for prog in $(progs)
+{
+	exe $(prog) : $(prog).cpp ;
+}
+
